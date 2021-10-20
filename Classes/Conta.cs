@@ -34,5 +34,12 @@ namespace DIO.Bank
 
             return true;
         }
+        public void Depositar(double valorDeposito)
+		{
+			this.Saldo += valorDeposito; 
+            // Igual a linha de Cima : this.Saldo = this.Saldo + valorDeposito
+
+            Console.WriteLine("Saldo atual da conta de {0} é {1}", this.Nome, this.Saldo);
+		}
     }
 }
