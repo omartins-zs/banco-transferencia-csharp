@@ -44,6 +44,17 @@ namespace DIO.Bank
 			Console.ReadLine();
 		}
 
+        private static void Sacar()
+		{
+			Console.Write("Digite o número da conta: ");
+			int indiceConta = int.Parse(Console.ReadLine());
+
+			Console.Write("Digite o valor a ser sacado: ");
+			double valorSaque = double.Parse(Console.ReadLine());
+
+            listContas[indiceConta].Sacar(valorSaque);
+		}
+
         private static void InserirConta()
 		{
 			Console.WriteLine("Inserir nova conta");
