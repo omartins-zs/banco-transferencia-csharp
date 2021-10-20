@@ -68,6 +68,24 @@ namespace DIO.Bank
 			listContas.Add(novaConta);
 		}
 
+        private static void ListarContas()
+		{
+			Console.WriteLine("Listar contas");
+
+			if (listContas.Count == 0)
+			{
+				Console.WriteLine("Nenhuma conta cadastrada.");
+				return;
+			}
+
+			for (int i = 0; i < listContas.Count; i++)
+			{
+				Conta conta = listContas[i];
+				Console.Write("#{0} - ", i);
+				Console.WriteLine(conta);
+			}
+		}
+
         private static string ObterOpcaoUsuario()
 		{
 			Console.WriteLine();
